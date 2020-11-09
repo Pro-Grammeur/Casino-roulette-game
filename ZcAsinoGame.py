@@ -33,14 +33,18 @@ while Gamer_Silver > 0:
                                                      print("Votre jeu démarre...")
 
                                                      nb_choosebyGameur = int(input("Miser sur un nombre compris entre 0 et 20: "))   # nombre sur lequel misera le joueur
-
-
+                
+                                                     if nb_choosebyGameur > 20 or nb_choosebyGameur < 0:
+                                                         print("Veuillez redémarrer le jeu avec plus de sérieux!!")
+                                                         break
 
 
 
                                                      miseGamer = int(input("Combien misez-vous sur ce nombre? (merci de rentrer un entier): "))      # combien mise le joueur ?
 
-
+                                                     if miseGamer > 1000 or miseGamer < 0:
+                                                         print("Veuillez redémarrer le jeu avec plus de sérieux!!")
+                                                         break
 
                                                      print('Votre démarche est en cours d examination... ')
 
@@ -58,7 +62,7 @@ while Gamer_Silver > 0:
                                                              print("Bravo à vous {}. Je vous félicite. On vous retrouve très vite à la table de la roulette!".format(gamerPseudo))
                                                          break # arret du jeu
 
-                                                    # j'aurais pu mettre "break" pour l'arrêt du jeu si Gameur gagne mais j'ai choisis de faire comme Openclassrooms...
+                                                    
 
                                                      # condition qui va accomplir certaines instructions si nb_choosebyGameur est pair
                                                      if nb_choosebyGameur != number_winner and nb_choosebyGameur % 2 == 0:
